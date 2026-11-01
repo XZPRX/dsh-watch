@@ -1,0 +1,10 @@
+# SSE 经隧道验证：端口 8791，关闭自带隧道，外部手动起 cloudflared 测流式是否被缓冲。
+- insert:
+    - id: dsh-watch
+      name: '../plugin/index.js'
+      config:
+        port: 8791
+        bind: 127.0.0.1
+        approvalMode: watch
+        discovery: false
+        tunnel: off

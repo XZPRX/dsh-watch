@@ -1,0 +1,9 @@
+# 故障转移验证 B：备用实例（模拟“外网可达的另一条路径”），端口 8776。
+- insert:
+    - id: dsh-watch
+      name: '../plugin/index.js'
+      config:
+        port: 8776
+        bind: 127.0.0.1
+        approvalMode: watch
+        discovery: false

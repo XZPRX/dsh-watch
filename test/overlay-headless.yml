@@ -1,0 +1,12 @@
+# 联调 overlay：把 dsh-watch 插进任意 profile 组合做真实端到端联调。
+# name 用相对路径，按 overlay 文件所在目录解析（这里是 test/ → ../plugin/index.js），不含任何本机路径。
+- insert:
+    - id: dsh-watch
+      name: '../plugin/index.js'
+      config:
+        port: 8765
+        bind: 0.0.0.0
+        approvalMode: watch
+        approvalTimeoutMs: 120000
+        discovery: false
+        maxText: 400

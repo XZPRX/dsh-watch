@@ -1,0 +1,13 @@
+# 联调专用 overlay：换端口 + 开启真实发现端口，用来验证「自动发现 + 6 位配对码」。
+# name 相对本文件所在目录（test/ → ../plugin/index.js）。
+- insert:
+    - id: dsh-watch
+      name: '../plugin/index.js'
+      config:
+        port: 8775
+        bind: 0.0.0.0
+        approvalMode: watch
+        approvalTimeoutMs: 120000
+        discovery: true
+        discoveryPort: 8766
+        pairingTtlMs: 600000

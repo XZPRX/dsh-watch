@@ -1,0 +1,10 @@
+# 故障转移验证 A：主力实例，remoteUrl 指向本机 8776（模拟“外网地址”）。
+- insert:
+    - id: dsh-watch
+      name: '../plugin/index.js'
+      config:
+        port: 8775
+        bind: 127.0.0.1
+        approvalMode: watch
+        discovery: false
+        remoteUrl: 'http://127.0.0.1:8776'

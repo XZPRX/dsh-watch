@@ -1,0 +1,13 @@
+# 外网验证：插件自己起 ssh 反向隧道（localhost.run，免账号），手表用公网 https 地址连。
+- insert:
+    - id: dsh-watch
+      name: '../plugin/index.js'
+      config:
+        port: 8785
+        bind: 0.0.0.0
+        approvalMode: watch
+        discovery: false
+        tunnel: ssh
+        tunnelHost: localhost.run
+        tunnelPort: 22
+        tunnelUser: nokey

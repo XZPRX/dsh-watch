@@ -1,0 +1,10 @@
+# 验证「外部隧道文件」通道：tunnel 关闭时，插件也能从 ~/.dsh/dsh-watch-remote.txt 读到外网地址。
+- insert:
+    - id: dsh-watch
+      name: '../plugin/index.js'
+      config:
+        port: 8777
+        bind: 127.0.0.1
+        approvalMode: watch
+        discovery: false
+        tunnel: off

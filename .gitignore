@@ -1,0 +1,26 @@
+# 构建产物 / 测试产物
+out/
+promo/work/
+promo/*.mp4
+*.apk
+*.log
+
+# 签名密钥（build.ps1 会自动生成，绝不入库）
+*.keystore
+*.jks
+
+# 本地环境
+.tmp/
+node_modules/
+__pycache__/
+*.pyc
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# ����/�������
+*.out.txt
+
